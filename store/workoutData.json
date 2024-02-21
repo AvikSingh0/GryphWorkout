@@ -1,0 +1,75 @@
+
+{
+  "workoutPlans": [
+    {
+      "workoutName": "Chest Day",
+      "exercises": [
+        {
+          "exerciseName": "Bench Press",
+          "setList": [
+            {
+              "setCount": 2,
+              "repCount": 15,
+              "weight": 25
+            },
+            {
+              "setCount": 1,
+              "repCount": 10,
+              "weight": 35
+            },
+            {
+              "setCount": 1,
+              "repCount": 5,
+              "weight": 45
+            }
+          ]
+        },
+        {
+          "exerciseName": "Push-Up",
+          "setList": [
+            {
+              "setCount": 5,
+              "repCount": 15,
+              "weight": 0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "workoutName": "Leg Day",
+      "exercises": [
+        {
+          "exerciseName": "Leg Extensions",
+          "setList": [
+            {
+              "setCount": 2,
+              "repCount": 15,
+              "weight": 25
+            },
+            {
+              "setCount": 1,
+              "repCount": 10,
+              "weight": 35
+            },
+            {
+              "setCount": 1,
+              "repCount": 5,
+              "weight": 45
+            }
+          ]
+        },
+        {
+          "exerciseName": "Squat",
+          "setList": [
+            {
+              "setCount": 5,
+              "repCount": 15,
+              "weight": 0
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
