@@ -4,7 +4,7 @@ import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import Icon from 'react-native-vector-icons/FontAwesome';
 import Home from '../components/Home.jsx';
 import Settings from '../components/Settings.jsx';
-import Favourites from '../components/Favourites.jsx';
+import AllWorkouts from '../components/AllWorkouts.jsx';
 
 const Tab = createBottomTabNavigator();
 const color = 'grey';
@@ -32,7 +32,7 @@ function BottomTab() {
       />
       <Tab.Screen
         name="Workout"
-        component={Favourites}
+        component={AllWorkouts}
         options={{
           tabBarLabel: 'Workout',
           tabBarIcon: ({ color, size }) => (

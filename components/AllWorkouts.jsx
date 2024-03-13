@@ -11,7 +11,7 @@ import {
   FlatList,
 } from 'react-native';
 import Icon from 'react-native-vector-icons/FontAwesome';
-import ExercisePlanItem from '../components/ExercisePlanItem.jsx';
+import ExercisePlanItem from './ExercisePlanItem.jsx';
 import { useSelector, useDispatch } from 'react-redux';
 
 const navStyles = StyleSheet.create({
@@ -29,7 +29,7 @@ const navStyles = StyleSheet.create({
   },
 });
 
-const Favourites = () => {
+const AllWorkouts = () => {
   return (
     <View>
       <Text>Workouts</Text>
@@ -37,4 +37,4 @@ const Favourites = () => {
   );
 }
 
-export default Favourites;
+export default AllWorkouts;
