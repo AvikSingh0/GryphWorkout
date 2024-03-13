@@ -16,6 +16,7 @@ function BottomTab() {
       initialRouteName="Plan"
       screenOptions={{
         tabBarActiveTintColor: '#e91e63',
+        tabBarStyle: { backgroundColor: 'rgba(250, 204, 49, 1)', height: 60 },
         headerShown: false
       }}
     >
