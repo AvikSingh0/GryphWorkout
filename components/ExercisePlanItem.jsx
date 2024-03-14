@@ -17,8 +17,10 @@ const styles = StyleSheet.create({
     aspectRatio: 2,
     borderRadius: 15,
     overflow: 'hidden',
-    backgroundColor: 'rgb(204, 0, 0)',
-    flexDirection: 'row'
+    backgroundColor: 'rgba(150, 2, 36, 1)',
+    flexDirection: 'row',
+    
+ 
   },
   leftContainer: {
     flex: 1,
@@ -58,6 +60,7 @@ const styles = StyleSheet.create({
     alignSelf: 'left',
     textAlign: 'left',
     flex: 1
+    
   },
   repCountContainer: {
     alignSelf: 'center',
@@ -67,9 +70,11 @@ const styles = StyleSheet.create({
   weightCountContainer: {
     alignSelf: 'right',
     textAlign: 'right',
+    
   },
   rowText: {
     color: 'white',
+    
   }
 
 
