@@ -131,7 +131,7 @@ const styles = StyleSheet.create({
     
   },
   sectionHeader: {
-    backgroundColor: 'rgba(250, 204, 49, 0.7) ',
+    backgroundColor: 'rgba(250, 204, 49, 0.7)',
     paddingVertical: 9,
     paddingHorizontal: 15,
   },

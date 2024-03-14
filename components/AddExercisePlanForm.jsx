@@ -24,7 +24,7 @@ const AddExercisePlanForm = ({workoutPlanIndex}) => {
   const dispatch = useDispatch();
   
   const handleAddSet = () => {
-    setSetList([...setList, { setCount: 1, repCount: 15, weight: 0 }]);
+    setSetList([...setList, { setCount: 0, repCount: 0, weight: 0 }]);
   };
 
   const handleSetChange = (index, setCount, repCount, weight) => {
@@ -48,6 +48,9 @@ const AddExercisePlanForm = ({workoutPlanIndex}) => {
       onChangeText={(text) => setExerciseName(text)}
     />
   </View>
+  <TouchableOpacity style={styles.addPhotoButton}>
+    <Text style={styles.addPhotoText}>+ Add Photo</Text>
+  </TouchableOpacity>
 
   {setList.map((set, index) => (
     <View key={index} style={styles.setContainer}>
@@ -204,15 +207,33 @@ const styles = StyleSheet.create({
     fontSize:16,
   },
   notesInput: {
-    height: 200, 
+    height: 120, 
     borderColor: 'lightgray',
     borderWidth: 1,
-    marginBottom: 40,
+    marginBottom: 20,
     borderRadius: 15,
     backgroundColor: 'lightgray',
     paddingHorizontal: 10,
     textAlignVertical: 'top',
     flex: 1,  
   },
+  addPhotoButton: {
+    backgroundColor: 'lightgray', 
+    borderRadius: 5,
+    borderWidth: 1,
+    borderColor: 'gray',  
+    padding: 10,
+    justifyContent: 'center',
+    alignItems: 'center',
+    height: 100,
+    width: 100, // Fixed height for the square box
+    marginBottom: 20,
+    alignSelf:'center',
+  },
+  addPhotoText: {
+    color: 'gray', 
+    fontWeight: 'bold',
+  },
+  
 });
 export default AddExercisePlanForm;

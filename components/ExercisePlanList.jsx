@@ -23,14 +23,29 @@ const styles = StyleSheet.create({
   exerciseListRow: {
     gap: 10,
     paddingBottom: 15,
+  },  
+  titleContainer: {
+    paddingVertical: 22, 
+    paddingBottom : 34,
+  },
+  title: {
+    fontSize: 22,
+    fontWeight: 'bold',
+    textAlign: 'center',
+    color: 'rgba(150, 2, 36, 1)',
+    paddingBottom: 10,
+    borderBottomWidth: 1,
+    
   },
 });
+
 
 
 const ExercisePlanList = ({navigation, route}) => {
   const {workoutPlanIndex} = route.params;
   const workoutPlans = useSelector(state => state.workoutPlans);
   const exercisePlans = workoutPlans[workoutPlanIndex].exercises;
+  const workoutPlanName = workoutPlans[workoutPlanIndex].workoutName; 
 
   const [isModalVisible, setIsModalVisible] = useState(false);
   const toggleModal = () => {
@@ -39,6 +54,9 @@ const ExercisePlanList = ({navigation, route}) => {
 
   return (
     <ScrollView style={styles.exerciseListContainer}>
+      <View style={styles.titleContainer}>
+        <Text style={styles.title}>{workoutPlanName}</Text>
+      </View>
       <View style={styles.exerciseListRow}>
         {exercisePlans.map((exercisePlan, index) => {
           return (<ExercisePlanItem key={index} workoutPlanIndex={workoutPlanIndex} exerciseIndex={index}></ExercisePlanItem>);

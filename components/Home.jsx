@@ -18,6 +18,7 @@ const Stack = createNativeStackNavigator();
 
 const Home = ({navigation}) => {
   return (
+  
     <Stack.Navigator
       initialRouteName="WorkoutPlanList"
       screenOptions={{
@@ -34,6 +35,7 @@ const Home = ({navigation}) => {
       />
 
     </Stack.Navigator>
+    
 
   );
 }
