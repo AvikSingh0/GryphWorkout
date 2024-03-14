@@ -6,7 +6,7 @@ import {
   View,
   Text,
   Modal,
-  ScrollView,
+  ScrollView,TouchableOpacity
 } from 'react-native';
 import Icon from 'react-native-vector-icons/FontAwesome';
 import ExercisePlanItem from '../components/ExercisePlanItem.jsx';
@@ -37,6 +37,12 @@ const styles = StyleSheet.create({
     borderBottomWidth: 1,
     
   },
+  backButtonContainer: {
+    position: 'absolute',  
+    top: 20,
+    left: 10,
+    
+  },
 });
 
 
@@ -62,16 +68,20 @@ const ExercisePlanList = ({navigation, route}) => {
           return (<ExercisePlanItem key={index} workoutPlanIndex={workoutPlanIndex} exerciseIndex={index}></ExercisePlanItem>);
         })}
       </View>
-
       <View style={styles.exerciseListRow}>
         <Button title="Add Exercise" onPress={toggleModal} />
         <Modal
-          visible={isModalVisible}>
+          visible={isModalVisible}  >
           <View>
             <AddExercisePlanForm workoutPlanIndex={workoutPlanIndex}/>
-            <View>
-              <Button title="Cancel" onPress={toggleModal} />
-            </View>
+ 
+            <TouchableOpacity
+            style={styles.backButtonContainer}
+            onPress={toggleModal}  
+            >
+              <Icon name="arrow-left" size={20} color="#000" />
+            </TouchableOpacity>  
+            <Button title="Cancel" onPress={toggleModal} />
           </View>
         </Modal>
       </View>
