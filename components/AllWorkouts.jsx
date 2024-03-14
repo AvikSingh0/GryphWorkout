@@ -69,7 +69,7 @@ const styles = StyleSheet.create({
 
   titleContainer: {
     paddingVertical: 22, 
-    paddingBottom : 34,
+ 
   },
   title: {
     fontSize: 22,
@@ -82,9 +82,11 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: 'white',
+    
   },  exerciseListRow: {
     gap: 25,
-    paddingBottom: 15,
+ 
+    padding: 10
   },
   settingRow: {
     flexDirection: 'row',
